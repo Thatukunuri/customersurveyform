@@ -68,7 +68,7 @@
     <select id="country" required>
       <option value="usa">USA</option>
       <option value="canada">Canada</option>
-      <!-- Add more countries as needed -->
+    
     </select>
 
     <label>Gender:</label>
@@ -92,7 +92,7 @@
 
   <script>
     function submitForm() {
-      // Validate the form fields (you can add more validations as needed)
+      
       const firstName = document.getElementById('firstName').value;
       const lastName = document.getElementById('lastName').value;
       const dob = document.getElementById('dob').value;
@@ -107,7 +107,6 @@
         return;
       }
 
-      // Display popup with selected values
       const popupContent = `
         <p><strong>First Name:</strong> ${firstName}</p>
         <p><strong>Last Name:</strong> ${lastName}</p>
@@ -122,15 +121,13 @@
       document.getElementById('popup').innerHTML = popupContent;
       document.getElementById('popup').style.display = 'block';
 
-      // Reset the form
+      
       resetForm();
     }
 
     function resetForm() {
       document.getElementById('surveyForm').reset();
     }
-
-    // Close popup on clicking outside the popup
     window.onclick = function(event) {
       const popup = document.getElementById('popup');
       if (event.target == popup) {
